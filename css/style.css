@@ -78,7 +78,7 @@ h1 { font-size: 52px; font-weight: 800; line-height: 1.1; color: var(--dark); }
 .description { font-size: 18px; color: var(--text-muted); margin-bottom: 40px; max-width: 550px; }
 
 .hero-btns { display: flex; gap: 20px; align-items: center; }
-.btn { padding: 15px 30px; border-radius: 12px; font-weight: 700; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; }
+.btn { padding: 15px 30px; border-radius: 12px; font-weight: 700; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; background-color: #b6ecc6; }
 .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
 .btn-solid-green { background: var(--primary); color: #fff; box-shadow: 0 10px 20px rgba(22, 163, 74, 0.2); }
 
@@ -528,4 +528,193 @@ h1 { font-size: 52px; font-weight: 800; line-height: 1.1; color: var(--dark); }
 @media (max-width: 480px) {
     .sticky-socials { bottom: 20px; right: 15px; }
     .social-btn { width: 45px; height: 45px; }
+}
+
+/* --- SECTION 8: FOOTER INFO --- */
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Thông tin bên trái, bản đồ bên phải */
+    gap: 60px;
+    align-items: start;
+    background: var(--white);
+    padding: 50px;
+    border-radius: var(--radius);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.footer-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.title-line-left {
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.info-list {
+    display: grid;
+    gap: 25px;
+}
+
+.info-list li {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-list li i {
+    font-size: 20px;
+    color: var(--primary);
+    background: #f0fdf4;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-list li span {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.info-list li p, .info-list li strong {
+    font-size: 16px;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* Map Styling */
+.map-box {
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Copyright Bar */
+.copyright {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 1024px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 40px;
+    }
+    
+    .footer-title {
+        text-align: center;
+        font-size: 26px;
+    }
+    
+    .title-line-left {
+        margin: 10px auto 30px;
+    }
+
+    .map-box {
+        height: 300px;
+    }
+}
+
+
+
+/* ==========================================================================
+   FIX LỖI TRÀN MÀN HÌNH (MOBILE OVERFLOW FIX)
+   ========================================================================== */
+
+
+
+/* 2. Tối ưu lại Container trên mobile cực nhỏ */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px !important; /* Giảm lề hai bên container */
+    }
+
+    .section-padding {
+        padding: 50px 0 !important; /* Giảm khoảng cách trắng quá lớn giữa các section */
+    }
+
+    /* FIX SECTION 7: Khối Form đang bị tràn */
+    .contact-wrapper {
+        padding: 25px 15px !important; /* Giảm padding cực lớn từ 50px xuống 15px */
+        grid-template-columns: 1fr !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .form-card, .share-card {
+        padding: 0 !important; /* Bỏ padding thừa của card bên trong */
+        width: 100% !important;
+    }
+
+    .custom-form {
+        width: 100% !important;
+    }
+
+    /* Tối ưu cỡ chữ tiêu đề để không bị nhảy dòng xấu */
+    .section-title {
+        font-size: 22px !important;
+    }
+
+    h1 {
+        font-size: 28px !important;
+    }
+
+    .highlight-text {
+        font-size: 24px !important;
+    }
+
+    /* Thu nhỏ nút liên hệ cố định để không che mất nội dung form */
+    .sticky-socials {
+        right: 10px !important;
+        bottom: 20px !important;
+        gap: 8px !important;
+    }
+
+    .social-btn {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .social-btn img {
+        width: 22px !important;
+    }
+
+    .social-btn.phone, .social-btn.facebook {
+        font-size: 16px !important;
+    }
+
+    /* Khắc phục lỗi Header Logo bị chèn ép */
+    .logo img {
+        height: 32px !important;
+    }
+}
+
+/* 3. Đảm bảo mọi Input không bao giờ vượt quá chiều rộng màn hình */
+input, select, textarea, button {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 4. Fix cho Reveal Element (Đôi khi Transform làm tràn lề) */
+.reveal-element {
+    max-width: 100% !important;
 }
