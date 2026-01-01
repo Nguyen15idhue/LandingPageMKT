@@ -57,10 +57,18 @@
 
     <!-- NÚT LIÊN HỆ CỐ ĐỊNH -->
     <div class="sticky-socials">
-        <a href="https://zalo.me/sdt_cua_ban" class="social-btn zalo" target="_blank">
+        <!-- Nút Facebook -->
+        <a href="https://facebook.com/geotek" class="social-btn facebook" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        
+        <!-- Nút Zalo -->
+        <a href="https://zalo.me/09499494444" class="social-btn zalo" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
         </a>
-        <a href="tel:09xxxxxx" class="social-btn phone">
+        
+        <!-- Nút Gọi điện -->
+        <a href="tel:09499494444" class="social-btn phone">
             <i class="fa-solid fa-phone-volume"></i>
         </a>
     </div>
@@ -394,6 +402,94 @@
                     </div>
                     <!-- Dấu chấm phân trang (hiện trên Mobile) -->
                     <div class="swiper-pagination service-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: LIÊN HỆ & CHIA SẺ -->
+        <section id="contact" class="section-padding bg-dark">
+            <div class="container">
+                <div class="contact-wrapper reveal-element">
+                    
+                    <!-- KHỐI 1: FORM THU THẬP THÔNG TIN -->
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h2 class="section-title text-white">Đăng ký Tư vấn & Demo</h2>
+                            <p>Để lại thông tin để chuyên viên Geotek hỗ trợ bạn tốt nhất.</p>
+                        </div>
+
+                        <form id="google-form" class="custom-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nhu cầu hiện tại của bạn</label>
+                                    <select name="entry_nhu_cau" id="nhucau" required>
+                                        <option value="">-- Chọn nhu cầu --</option>
+                                        <option value="Thuê thiết bị">Thuê thiết bị RS10</option>
+                                        <option value="Thuê dịch vụ trọn gói">Thuê dịch vụ trọn gói</option>
+                                        <option value="Mua thiết bị">Mua thiết bị RS10</option>
+                                        <option value="Khác">Cần tư vấn giải pháp khác</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row flex">
+                                <div class="form-group">
+                                    <label>Họ và tên</label>
+                                    <input type="text" name="entry_ten" id="name" placeholder="Nguyễn Văn A" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <input type="tel" name="entry_sdt" id="phone" placeholder="09xx.xxx.xxx" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nguồn giới thiệu</label>
+                                <select name="entry_nguon" id="source" required>
+                                    <option value="">-- Bạn biết đến sản phẩm RS10 qua đâu? --</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Zalo">Zalo</option>
+                                    <option value="YouTube">YouTube</option>
+                                    <option value="LinkedIn">LinkedIn</option>
+                                    <option value="Website">Website Geotek</option>
+                                    <option value="Người quen">Người quen giới thiệu</option>
+                                    <option value="Khác">Nguồn khác</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Ghi chú thêm</label>
+                                <textarea name="entry_ghichu" id="note" rows="3" placeholder="Yêu cầu cụ thể của bạn..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-solid-green w-full" id="submit-btn">
+                                GỬI THÔNG TIN NGAY
+                            </button>
+                            <div id="form-msg" class="success-msg">Cảm ơn bạn! Geotek sẽ liên hệ lại ngay.</div>
+                        </form>
+                    </div>
+
+                    <!-- KHỐI 2: CHIA SẺ (QR & LINK) -->
+                    <div class="share-card">
+                        <div class="share-content">
+                            <h3 class="text-white">Chia sẻ giải pháp RS10</h3>
+                            <p>Lan tỏa công nghệ đo đạc hiện đại đến đồng nghiệp và đối tác.</p>
+                            
+                            <!-- QR Code tự động tạo theo Link web -->
+                            <div class="qr-box">
+                                <div id="qrcode"></div>
+                                <span>Quét để xem trên Mobile</span>
+                            </div>
+
+                            <div class="copy-link-wrapper">
+                                <input type="text" id="site-url" readonly>
+                                <button class="btn-copy" onclick="copySiteLink()">
+                                    <i class="fa-regular fa-copy"></i> Copy Link
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

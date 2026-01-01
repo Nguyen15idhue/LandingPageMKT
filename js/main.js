@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileNav = document.getElementById('mobile-nav');
     const toggleBtn = document.getElementById('mobile-toggle');
     const toggleIcon = toggleBtn ? toggleBtn.querySelector('i') : null;
+    const form = document.getElementById('google-form');
+
 
     // ==========================================
     // 1. XỬ LÝ HEADER KHI CUỘN TRANG
@@ -166,7 +168,73 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         revealObserver.observe(el);
     });
+
+     // ==========================================
+    // 7. XỬ LÝ GOOGLE FORM & CHIA SẺ (CODE MỚI ĐÂY)
+    // ==========================================
+    const googleForm = document.getElementById('google-form');
+    const currentUrl = window.location.href;
+
+    if (googleForm) {
+        // Tự động điền URL và tạo QR Code
+        const siteUrlInput = document.getElementById('site-url');
+        const qrContainer = document.getElementById('qrcode');
+        
+        if (siteUrlInput) siteUrlInput.value = currentUrl;
+        if (qrContainer) {
+            const qrImg = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(currentUrl)}`;
+            qrContainer.innerHTML = `<img src="${qrImg}" alt="QR Code">`;
+        }
+
+        // Xử lý gửi Form sang Google Backend
+        googleForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const msg = document.getElementById('form-msg');
+
+            btn.innerText = "ĐANG GỬI...";
+            btn.disabled = true;
+
+            // --- THAY LINK formResponse CỦA BẠN VÀO ĐÂY ---
+            const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf84czfooXPkCSekSY6PIG9FuQ_4BVelys5qBbIWiTudID28Q/formResponse";
+            
+            const formData = new FormData();
+            // --- THAY CÁC entry.XXXXXX BẰNG ID THỰC TẾ CỦA FORM BẠN ---
+            formData.append('entry.983497313', document.getElementById('nhucau').value);
+            formData.append('entry.1062507316', document.getElementById('name').value);
+            formData.append('entry.1438312212', document.getElementById('phone').value);
+            formData.append('entry.1827864515', document.getElementById('source').value);
+            formData.append('entry.1525628736', document.getElementById('note').value);
+
+            fetch(GOOGLE_FORM_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
+                msg.style.display = "block";
+                googleForm.reset();
+                btn.innerText = "GỬI THÀNH CÔNG!";
+                btn.style.background = "#059669";
+            }).catch(error => {
+                alert("Có lỗi kỹ thuật, vui lòng thử lại sau!");
+                btn.disabled = false;
+                btn.innerText = "GỬI LẠI";
+            });
+        });
+    }
+
+    // Hàm Copy Link (Gắn vào cửa sổ window để HTML onclick gọi được)
+    window.copySiteLink = function() {
+        const copyText = document.getElementById("site-url");
+        if (copyText) {
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            alert("Đã copy link Landing Page Geotek!");
+        }
+    };
 });
+
 
 
 // ==========================================

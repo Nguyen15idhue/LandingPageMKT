@@ -99,7 +99,7 @@ h1 { font-size: 52px; font-weight: 800; line-height: 1.1; color: var(--dark); }
 .problem-wrapper { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: center; }
 .problem-image { border-radius: var(--radius); overflow: hidden; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.1); line-height: 0; }
 .problem-image img { width: 100%; height: auto; object-fit: cover; display: block; }
-.experience-tag { position: absolute; bottom: 20px; left: 20px; background: #ef4444; color: #fff; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 14px; }
+.experience-tag { position: absolute; bottom: 20px; left: 20px; background: #ef4444; color: #fff; padding: 16px 20px; border-radius: 50px; font-weight: 700; font-size: 14px; }
 
 .problem-list { display: grid; gap: 20px; }
 .problem-card { background: #fff; padding: 25px; border-radius: 15px; display: flex; gap: 20px; transition: var(--transition); border: 1px solid transparent; }
@@ -401,4 +401,131 @@ h1 { font-size: 52px; font-weight: 800; line-height: 1.1; color: var(--dark); }
     transform: translateY(-10px);
     border-color: var(--primary);
     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+
+/* --- SECTION 7: CONTACT & SHARE --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    background: var(--dark-card);
+    border-radius: var(--radius);
+    padding: 50px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card-header { margin-bottom: 30px; }
+.card-header p { color: var(--text-muted); }
+
+.custom-form .form-row.flex { display: flex; gap: 20px; }
+.form-group { margin-bottom: 20px; width: 100%; }
+.form-group label { display: block; color: var(--white); font-weight: 700; margin-bottom: 8px; font-size: 14px; }
+
+.custom-form input, .custom-form select, .custom-form textarea {
+    width: 100%; padding: 12px 15px; background: #0f172a; border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; color: white; font-family: inherit; transition: 0.3s;
+}
+
+.custom-form input:focus { border-color: var(--primary); outline: none; }
+
+.success-msg { display: none; color: #4ade80; margin-top: 15px; font-weight: 700; text-align: center; }
+
+/* Share Card */
+.share-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px dashed rgba(255,255,255,0.1);
+}
+
+.qr-box {
+    background: white; padding: 15px; border-radius: 12px; margin: 30px 0 20px;
+    display: inline-block;
+}
+.qr-box img { width: 150px; height: 150px; }
+.qr-box span { display: block; color: #1e293b; font-size: 12px; font-weight: 700; margin-top: 10px; }
+
+.copy-link-wrapper {
+    display: flex; width: 100%; background: #0f172a; border-radius: 8px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.copy-link-wrapper input { background: transparent; border: none; padding: 10px; color: #94a3b8; font-size: 13px; flex: 1; }
+.btn-copy { background: var(--primary); color: white; border: none; padding: 10px 15px; font-weight: 700; cursor: pointer; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-wrapper { grid-template-columns: 1fr; padding: 30px; }
+    .custom-form .form-row.flex { flex-direction: column; gap: 0; }
+}
+
+
+/* --- STICKY SOCIALS CẢI TIẾN --- */
+.sticky-socials {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Khoảng cách giữa các nút */
+    z-index: 9999;
+}
+
+.social-btn {
+    width: 50px; /* Thu nhỏ một chút để 3 nút nhìn thanh thoát hơn */
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    color: white; /* Màu icon cho FB và Phone */
+}
+
+/* Màu chuẩn Facebook */
+.social-btn.facebook {
+    background-color: #1877F2;
+    font-size: 20px;
+}
+
+/* Màu chuẩn Zalo */
+.social-btn.zalo {
+    background-color: #0068ff;
+}
+
+/* Màu chuẩn Geotek/Phone */
+.social-btn.phone {
+    background-color: var(--primary);
+    font-size: 20px;
+    animation: pulse-phone 2s infinite; /* Hiệu ứng nháy cho nút chính */
+}
+
+/* Hiệu ứng phóng to khi di chuột */
+.social-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.social-btn img {
+    width: 28px;
+}
+
+/* Hiệu ứng nháy cho nút điện thoại thu hút sự chú ý */
+@keyframes pulse-phone {
+    0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(22, 163, 74, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+/* Trên mobile cực nhỏ thì thu nhỏ nút lại chút nữa */
+@media (max-width: 480px) {
+    .sticky-socials { bottom: 20px; right: 15px; }
+    .social-btn { width: 45px; height: 45px; }
 }
