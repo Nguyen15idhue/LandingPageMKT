@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOTEK RS10 | Công nghệ quét Laser 3D SLAM & GNSS RTK</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS (Slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container header-wrapper">
+            <div class="logo">
+                <img src="assets/images/logo-geotek.png" alt="Geotek Logo">
+            </div>
+            
+            <nav class="nav-menu desktop-only">
+                <ul class="nav-list">
+                    <li><a href="#hero">Trang chủ</a></li>
+                    <li><a href="#problems">Thách thức</a></li>
+                    <li><a href="#applications">Ứng dụng</a></li>
+                    <li><a href="#solution">Giải pháp RS10</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <a href="#contact" class="btn btn-outline desktop-only">Nhận báo giá</a>
+                <div class="menu-toggle" id="mobile-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav-container" id="mobile-nav">
+            <ul>
+                <li><a href="#hero">Trang chủ</a></li>
+                <li><a href="#problems">Thách thức</a></li>
+                <li><a href="#applications">Ứng dụng</a></li>
+                <li><a href="#solution">Giải pháp</a></li>
+                <li><a href="#contact" class="btn btn-solid-green">Báo giá ngay</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- NÚT LIÊN HỆ CỐ ĐỊNH -->
+    <div class="sticky-socials">
+        <a href="https://zalo.me/sdt_cua_ban" class="social-btn zalo" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+        </a>
+        <a href="tel:09xxxxxx" class="social-btn phone">
+            <i class="fa-solid fa-phone-volume"></i>
+        </a>
+    </div>
+
+    <main>
+        <!-- SECTION 1: HERO -->
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <p class="tagline">Giải pháp khảo sát 3D chuyên dụng</p>
+                    <div class="title-area">
+                        <span class="bg-rs10">RS10</span>
+                        <h1>Hệ thống quét Laser 3D <br> <span>SLAM & GNSS RTK</span></h1>
+                        <h2 class="highlight-text">Cầm tay chuyên nghiệp</h2>
+                    </div>
+                    <p class="description">Tái lập không gian 3D chính xác centimet chỉ trong tích tắc. Giải pháp tối ưu cho hầm mỏ, quy hoạch đô thị và di sản công nghiệp.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-solid-green">Trải nghiệm thực tế <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-video"><span class="play-icon"><i class="fa-solid fa-play"></i></span> Xem Clip</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-box">
+                        <img src="assets/images/rs10-main.png" alt="Máy RS10" class="main-img">
+                        <div class="badge b-top"><i class="fa-solid fa-bullseye"></i> Accuracy < 1cm</div>
+                        <div class="badge b-bottom"><i class="fa-solid fa-satellite-dish"></i> GNSS Hybrid</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: THÁCH THỨC -->
+        <section id="problems" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p class="sub-title">Hiện trạng ngành</p>
+                    <h2 class="section-title">Thách thức trong đo đạc truyền thống</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="problem-wrapper">
+                    <div class="problem-image">
+                        <div class="image-overlay"></div>
+                        <img src="assets\images\rs10_anh_vietdo.jpg" alt="Đo đạc truyền thống"
+                        loading="lazy" 
+                        alt="Thách thức" 
+                        class="lazy-img">
+                        <div class="experience-tag">Hạn chế hiện tại</div>
+                    </div>
+
+                    <div class="problem-list">
+                        <div class="problem-card">
+                            <div class="p-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                            <div class="p-text">
+                                <h3>Tốn thời gian & nhân lực</h3>
+                                <p>Các phương pháp cũ đòi hỏi nhiều nhân sự và kéo dài thời gian thực hiện ngoài thực địa.</p>
+                            </div>
+                        </div>
+                        <div class="problem-card">
+                            <div class="p-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+                            <div class="p-text">
+                                <h3>Môi trường phức tạp</h3>
+                                <p>Khó khăn khi tiếp cận và thu thập dữ liệu tại các địa hình hiểm trở hoặc không gian hẹp.</p>
+                            </div>
+                        </div>
+                        <div class="problem-card">
+                            <div class="p-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="p-text">
+                                <h3>Sai số tích lũy</h3>
+                                <p>Dữ liệu dễ bị sai lệch do tác động môi trường hoặc lỗi thao tác của con người.</p>
+                            </div>
+                        </div>
+                        <div class="problem-card">
+                            <div class="p-icon"><i class="fa-solid fa-weight-hanging"></i></div>
+                            <div class="p-text">
+                                <h3>Thiết bị cồng kềnh</h3>
+                                <p>Việc vận chuyển máy móc nặng nề gây mệt mỏi và giảm đáng kể hiệu suất công việc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ỨNG DỤNG (SWIPER) -->
+        <section id="applications" class="section-padding bg-dark">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p class="sub-title" style="color: var(--primary);">LĨNH VỰC THỰC TẾ</p>
+                    <h2 class="section-title text-white">Ứng dụng đa lĩnh vực của RS10</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="swiper rs10-app-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="app-card">
+                                <div class="app-card-img"><img src="assets/images/app-bim.jpg" alt="BIM"></div>
+                                <div class="app-card-body">
+                                    <div class="app-icon"><i class="fa-solid fa-building-circle-check"></i></div>
+                                    <h3>Khảo sát Hiện trạng & BIM</h3>
+                                    <p>Tự động hóa việc tạo lập mô hình BIM 3D chính xác centimet cho các công trình dân dụng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="app-card">
+                                <div class="app-card-img"><img src="assets/images/app-factory.jpg" alt="Nhà máy"></div>
+                                <div class="app-card-body">
+                                    <div class="app-icon"><i class="fa-solid fa-industry"></i></div>
+                                    <h3>Số hóa Nhà máy</h3>
+                                    <p>Quét chi tiết hệ thống đường ống, thiết bị máy móc phức tạp trong nhà máy nhanh chóng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="app-card">
+                                <div class="app-card-img"><img src="assets/images/app-monitor.jpg" alt="Hạ tầng"></div>
+                                <div class="app-card-body">
+                                    <div class="app-icon"><i class="fa-solid fa-bridge"></i></div>
+                                    <h3>Giám sát Hạ tầng</h3>
+                                    <p>Đo đạc nhanh chóng các công trình cầu đường, hầm xuyên núi và kết cấu hạ tầng.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="app-card">
+                                <div class="app-card-img"><img src="assets/images/app-digital.jpg" alt="Digital Twin"></div>
+                                <div class="app-card-body">
+                                    <div class="app-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                                    <h3>Bản sao số Digital Twin</h3>
+                                    <p>Tạo lập bản sao số 1:1 phục vụ quy hoạch đô thị thông minh và quản lý tài sản kỹ thuật số.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="swiper-button-next custom-nav"></div>
+                    <div class="swiper-button-prev custom-nav"></div>
+                    <div class="swiper-pagination custom-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: GIẢI PHÁP RS10 -->
+        <section id="solution" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p class="sub-title">Sức mạnh công nghệ</p>
+                    <h2 class="section-title">RS10: Giải pháp đo quét 3D Toàn diện</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="solution-wrapper">
+                    <div class="solution-image">
+                        <div class="tech-overlay"></div>
+                        <img src="assets/images/rs10_camtay.jpg" alt="Máy RS10">
+                        <div class="floating-spec">
+                            <span class="spec-value">1.7kg</span>
+                            <span class="spec-label">Siêu nhẹ</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="f-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <div class="f-info">
+                                <h3>Chính xác tuyệt đối</h3>
+                                <p>Độ chính xác tương đối <strong>< 1 cm</strong>. Sai số hệ thống ngang/đứng cực thấp.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="f-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                            <div class="f-info">
+                                <h3>Hiệu suất quét cao</h3>
+                                <p>Tốc độ <strong>1,920,000 điểm/giây</strong>. Góc quét toàn diện 360° x 270°.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="f-icon"><i class="fa-solid fa-satellite"></i></div>
+                            <div class="f-info">
+                                <h3>Định vị Hybrid</h3>
+                                <p>RTK chính xác <strong>8mm</strong> kết hợp IMU 200Hz hoạt động mượt mà khi mất GPS.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="f-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                            <div class="f-info">
+                                <h3>Hình ảnh 15MP</h3>
+                                <p>Cụm 3 camera tích hợp dữ liệu hình ảnh toàn cảnh độ phân giải cao tại hiện trường.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="f-icon"><i class="fa-solid fa-battery-full"></i></div>
+                            <div class="f-info">
+                                <h3>Hot-swapping</h3>
+                                <p>Hỗ trợ thay pin nóng, đảm bảo máy hoạt động liên tục không gián đoạn công việc.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="f-icon"><i class="fa-solid fa-database"></i></div>
+                            <div class="f-info">
+                                <h3>Bộ nhớ 512GB</h3>
+                                <p>Lưu trữ khổng lồ cùng bộ phần mềm xử lý dữ liệu chuyên sâu CoPre chuyên nghiệp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
