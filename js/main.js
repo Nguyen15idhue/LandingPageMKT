@@ -175,6 +175,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const googleForm = document.getElementById('google-form');
     const currentUrl = window.location.href;
 
+    // Phone validation helpers
+    const phoneInput = document.getElementById('phone');
+    const phoneError = document.getElementById('phone-error');
+
+    function normalizePhoneDigits(input) {
+        if (!input) return '';
+        let digits = input.replace(/\D/g, '');
+        if (digits.startsWith('84')) digits = '0' + digits.slice(2);
+        return digits;
+    }
+
+    function isValidVNPhone(input) {
+        const digits = normalizePhoneDigits(input);
+        return /^0(3|5|7|8|9)\d{8}$/.test(digits);
+    }
+
     if (googleForm) {
         // Tự động điền URL và tạo QR Code
         const siteUrlInput = document.getElementById('site-url');
@@ -187,10 +203,41 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Xử lý gửi Form sang Google Backend
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function () {
+                if (isValidVNPhone(this.value)) {
+                    phoneError.style.display = 'none';
+                    this.style.borderColor = '';
+                } else {
+                    phoneError.style.display = 'none';
+                }
+            });
+        }
+
         googleForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
             const msg = document.getElementById('form-msg');
+
+            // Validate phone before sending
+            if (phoneInput) {
+                const phoneVal = phoneInput.value || '';
+                if (!isValidVNPhone(phoneVal)) {
+                    if (phoneError) {
+                        phoneError.style.display = 'block';
+                        phoneError.innerText = 'Số điện thoại không hợp lệ. Vui lòng nhập đúng 10 chữ số (ví dụ: 09xxxxxxxx).';
+                    }
+                    phoneInput.style.borderColor = '#dc2626';
+                    phoneInput.focus();
+                    return;
+                } else {
+                    if (phoneError) {
+                        phoneError.style.display = 'none';
+                        phoneError.innerText = '';
+                    }
+                    phoneInput.style.borderColor = '';
+                }
+            }
 
             btn.innerText = "ĐANG GỬI...";
             btn.disabled = true;

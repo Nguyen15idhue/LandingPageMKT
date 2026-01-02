@@ -170,7 +170,7 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="app-card">
-                                <div class="app-card-img"><img src="assets/images/app-bim.jpg" alt="BIM"></div>
+                                <div class="app-card-img"><img src="assets\images\khaosathientrangbim.jpg" alt="BIM"></div>
                                 <div class="app-card-body">
                                     <div class="app-icon"><i class="fa-solid fa-building-circle-check"></i></div>
                                     <h3>Khảo sát Hiện trạng & BIM</h3>
@@ -181,7 +181,7 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="app-card">
-                                <div class="app-card-img"><img src="assets/images/app-factory.jpg" alt="Nhà máy"></div>
+                                <div class="app-card-img"><img src="assets\images\sohoanhamay.jpeg" alt="Nhà máy"></div>
                                 <div class="app-card-body">
                                     <div class="app-icon"><i class="fa-solid fa-industry"></i></div>
                                     <h3>Số hóa Nhà máy</h3>
@@ -192,7 +192,7 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="app-card">
-                                <div class="app-card-img"><img src="assets/images/app-monitor.jpg" alt="Hạ tầng"></div>
+                                <div class="app-card-img"><img src="assets\images\giamsathatang.jpg" alt="Hạ tầng"></div>
                                 <div class="app-card-body">
                                     <div class="app-icon"><i class="fa-solid fa-bridge"></i></div>
                                     <h3>Giám sát Hạ tầng</h3>
@@ -203,7 +203,7 @@
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
                             <div class="app-card">
-                                <div class="app-card-img"><img src="assets/images/app-digital.jpg" alt="Digital Twin"></div>
+                                <div class="app-card-img"><img src="assets\images\twin.jpg" alt="Digital Twin"></div>
                                 <div class="app-card-body">
                                     <div class="app-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
                                     <h3>Bản sao số Digital Twin</h3>
@@ -441,7 +441,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Số điện thoại</label>
-                                    <input type="tel" name="entry_sdt" id="phone" placeholder="09xx.xxx.xxx" required>
+                                    <input type="tel" name="entry_sdt" id="phone" placeholder="09xx.xxx.xxx" required pattern="^(?:\+84|84|0)(3|5|7|8|9)\d{8}$">
+                                    <div class="input-error" id="phone-error" style="display:none;color:#b91c1c;margin-top:6px;font-size:0.9rem;"></div>
                                 </div>
                             </div>
 
@@ -547,15 +548,7 @@
                     <!-- CỘT 2: BẢN ĐỒ NHÚNG -->
                     <div class="map-box">
                         <!-- Bản đồ Google Maps nhúng tại Khuất Duy Tiến -->
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.811571439773!2d105.79585647596825!3d20.998184588755677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac963e6e1871%3A0xe5433a7806f71f6a!2zMTEgS2h14bqVdCBEdXkgVGnhur9uLCBUaGFuaCBYdcOibiBC4bqvYywIFRoYW5oIFh1w6JuLCBIw6AgTuG7mWksIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1715678901234!5m2!1sen!2s" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d803.9198463583838!2d105.79854326953236!3d20.994646250864804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU5JzQwLjciTiAxMDXCsDQ3JzU3LjEiRQ!5e1!3m2!1svi!2s!4v1767343818226!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
                 </div>
