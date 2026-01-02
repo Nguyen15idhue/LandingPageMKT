@@ -674,6 +674,11 @@ h1 { font-size: 52px; font-weight: 800; line-height: 1.1; color: var(--dark); }
         font-size: 22px !important;
     }
 
+    /* Nhỏ hơn cho sub-title trên thiết bị rất nhỏ */
+    .sub-title {
+        font-size: 10px !important;
+    }
+
     h1 {
         font-size: 28px !important;
     }
