@@ -72,7 +72,7 @@ ul { list-style: none !important; }
 
 .tagline { color: var(--primary); font-weight: 800; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; }
 .title-area { position: relative; margin: 15px 0; }
-.bg-rs10 { position: absolute; top: -40px; left: -10px; font-size: 160px; font-weight: 900; color: rgba(0,0,0,0.03); z-index: -1; pointer-events: none; }
+.bg-rs10 { position: absolute; top: -40px; left: -10px; font-size: 160px; font-weight: 900; color: rgba(0,0,0,0.04); z-index: -1; pointer-events: none; }
 h1 { font-size: 52px; font-weight: 800; line-height: 1.1; color: var(--dark); }
 .highlight-text { font-size: 38px; color: var(--primary); font-weight: 800; margin-bottom: 25px; }
 .description { font-size: 18px; color: var(--text-muted); margin-bottom: 40px; max-width: 550px; }
@@ -723,3 +723,4 @@ input, select, textarea, button {
 .reveal-element {
     max-width: 100% !important;
 }
+
